@@ -1,13 +1,13 @@
-import { SERVER__ADDR} from "./config";
+import { SERVER_ADDR} from "./config.js";
 
 
 const call = async (url) => {
-    const  req = await fetch(SERVER__ADDR + url);
+    const  req = await fetch(SERVER_ADDR + url);
     const result = await req.json()
     return result;
 };
 
-export const object = async (sort = null) => {
+export const products = async (sort = null) => {
     return await call(`products${sort ? `?sort=${sort}` : ''}`);
 };
 
