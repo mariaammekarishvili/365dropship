@@ -8,17 +8,15 @@ export const fillUpCatalog = async () => {
         productHTML += `
                 <div class="catalog__product">
                     <div class="catalog__photo">
-                        <img src="img/prodact01.jpg"/>
+                        <img src="${product.image}" />
                     </div>
 
                     <div class="catalog__title">
-                        Processor Intel Core™ i5-8400 2,8 Ghz 9 MB LGA 1151 BOX
+                        ${product.title}
                     </div>
 
                     <div class="catalog__price">
-                        $6 RRP
-                        $4 COST
-                        25% ($2)
+                        ${product.price}$
                     </div>
                 </div>
                `;
