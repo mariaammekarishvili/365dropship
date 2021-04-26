@@ -1,6 +1,6 @@
 
 export  const  generateProdact = (product) =>`
- <div class="catalog__product">
+                <div class="catalog__product">
                     <div class="catalog__photo">
                         <img src="${product.image}" />
                     </div>
