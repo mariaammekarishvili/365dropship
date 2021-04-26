@@ -7,11 +7,11 @@ const call = async (url) => {
     return result;
 };
 
-const object = async (sort = null) => {
+export const object = async (sort = null) => {
     return await call(`products${sort ? `?sort=${sort}` : ''}`);
 };
 
-const categories = async () => await call('products/categories');
+export const categories = async () => await call('products/categories');
 
 
 
