@@ -3,25 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Dropship</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div class="content">
         <nav class="navigation">
-            <img src="img/dropship_logo.png"/>
+            <img class="navigation__logo" src="img/dropship_logo.png"/>
+            <hr style="color: #F8F9FA">
         </nav>
 
         <aside class="category-filter">
-            <h2>Choose Niche</h2>
+            <div class="category-filter__title">
+                <h2>Choose Niche</h2> <i class="material-icons">&#xe5cf;</i>
+            </div>
         </aside>
 
         <main class="main">
             <header class="main__header">
-
+                <div class="main__search-box" >
+                    <input class="main__input" type="text"/> <button type="submit">🔎</button>
+                </div>
             </header>
+            <div class="main__sort">
+
+            </div>
 
             <section class="main__catalog">
+                <div class="catalog__product">
+                    <div class="catalog__photo">
+                        <img src="img/prodact01.jpg"/>
+                    </div>
 
+                    <div class="catalog__title">
+                        Processor Intel Core™ i5-8400 2,8 Ghz 9 MB LGA 1151 BOX
+                    </div>
+
+                    <div class="catalog__price">
+                        $6 RRP
+                        $4 COST
+                        25% ($2)
+                    </div>
+                </div>
+                <div class="catalog__product">2</div>
+                <div class="catalog__product">3</div>
+                <div class="catalog__product">4</div>
+                <div class="catalog__product">5</div>
             </section>
 
         </main>

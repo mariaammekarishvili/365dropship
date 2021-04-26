@@ -1,0 +1,142 @@
+body{
+    max-width: 2750px;
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;;
+}
+
+.content{
+    display: flex;
+}
+.navigation__logo{
+    width: 72%;
+    margin: 50px auto;
+    padding: 10px;
+}
+.navigation{
+    width: 4%;
+}
+
+/*category-filter*/
+
+.category-filter{
+    width: 15%;
+    background: #ECEDF5;
+}
+.category-filter__title{
+    height: 90px;
+    background: #49547D;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.category-filter__title>h2{
+    font-size: 43px;
+    display: inline;
+    margin: 20px 10px
+}
+.category-filter__title>.material-icons{
+    font-size: 30px;
+    margin: auto 0;
+    margin-left: 30px;
+}
+
+/*mine*/
+.main{
+    width: 81%;
+}
+
+/*main header*/
+
+.main__header {
+    background: #F8F9FA;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+}
+
+.main__search-box{
+    margin: auto 0;
+    height: 70px;
+    width: 900px;
+    background: #ffff;
+    border-radius: 10px;
+    border: #EFEFF1 1px solid;
+}
+.main__input{
+    width: 88%;
+    height: 90%;
+    background: #ffff;
+    border-radius: 10px;
+    border: #ffff 1px solid;
+    font-size: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    /*cursor: none;*/
+}
+.main__search-box>button{
+    height: 90%;
+    padding: 0;
+    margin: 0;
+    width: 10%;
+    font-size: 25px;
+    background: #ffff;
+    border-radius: 10px;
+    border: #ffff 1px solid;
+    cursor: pointer;
+}
+.main__sort{
+    background: white;
+    height: 80px;
+    border-bottom: 1px solid #E4E5EC;
+}
+/*main__catalog*/
+.main__catalog{
+    padding: 30px;
+    display: flex;
+    background: #F8F9FA;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.catalog__product{
+    margin: 20px;
+    flex: 1 500px;
+    max-width: 700px;
+    height: 400px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: #E4E5EC 4px solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.catalog__product:hover{
+    border: #61D5DF 4px solid;
+}
+.catalog__photo{
+    margin: 10px 0;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.catalog__title{
+    border-bottom:  #E4E5EC 1px solid;
+    text-align: center;
+    font-size: 30px;
+}
+.catalog__price{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.catalog__photo img{
+    max-width: 100%;
+    max-height: 100%;
+}
