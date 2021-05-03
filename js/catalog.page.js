@@ -1,11 +1,23 @@
-import { products } from "./API.js";
-import {generateProdact} from "./product.js";
+import {categories, productsSort  } from "./API.js";
+import {generateProductHtml } from "./product.js";
 
-products().then(productList => {
-    let productHTML = ``;
-    const catalog = document.getElementsByClassName('main__catalog')[0];
+
+const HtmlCatalog = document.getElementsByClassName('main__catalog')[0];
+
+///Output product in catalog
+const CatalogOutPut = async (sort) => {
+    let catalogHTML = ``;
+    const productList = await productsSort(sort);
     for(const product of productList) {
-        productHTML += generateProdact(product);
+        catalogHTML += generateProductHtml (product);
     }
-    catalog.innerHTML = productHTML;
-});
+    HtmlCatalog.innerHTML = catalogHTML;
+}
+
+console.log(CatalogOutPut)
+
+// Product Sort
+const sort = document.getElementById('sort');
+sort.addEventListener('change',() => {
+    CatalogOutPut(sort.value);
+})

@@ -1,5 +1,4 @@
-
-export  const  generateProdact = (product) =>`
+export  const  generateProductHtml = (product) =>`
                 <div class="catalog__product">
                     <div class="catalog__photo">
                         <img src="${product.image}" />

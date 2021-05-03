@@ -1,23 +1,20 @@
-import { SERVER_ADDR} from "./config.js";
+import {SERVER_ADDR} from "./serverAddres.js";
+
+const connect = async (url) =>
+{
+    try {
+        const request =  await  fetch(SERVER_ADDR + url)
+        const result = await request.json()
+        return(result)
+    }catch (err){
+        return(err)
+    }
+
+}
+
+export const productsSort = async (sort = null) => {
+    await connect(`products${sort ? `?sort=${sort}` : ""}`);
+}
 
 
-const call = async (url) => {
-    const  req = await fetch(SERVER_ADDR + url);
-    const result = await req.json()
-    return result;
-};
-
-export const products = async (sort = null) => {
-    return await call(`products${sort ? `?sort=${sort}` : ''}`);
-};
-
-export const categories = async () => await call('products/categories');
-
-
-
-
-
-
-
-
-// https://fakestoreapi.com/docs
+export const categories = async () => await connect('products/categories');
