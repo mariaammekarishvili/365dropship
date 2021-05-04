@@ -14,10 +14,12 @@ const CatalogOutPut = async (sort) => {
     HtmlCatalog.innerHTML = catalogHTML;
 }
 
-console.log(CatalogOutPut)
+
 
 // Product Sort
 const sort = document.getElementById('sort');
 sort.addEventListener('change',() => {
     CatalogOutPut(sort.value);
 })
+
+console.log(CatalogOutPut().then())
