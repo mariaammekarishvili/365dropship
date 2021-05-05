@@ -23,7 +23,7 @@ body{
     background: #ECEDF5;
 }
 .category-filter__title{
-    height: 90px;
+    min-height: 90px;
     background: #49547D;
     font-weight: 700;
     color: white;
@@ -31,10 +31,17 @@ body{
     display: flex;
     justify-content: center;
 }
+
+@media screen and (max-width: 1300px) {
+    .content>.navigation{
+        transform: initial!important;
+    }
+}
 .category-filter__title>h2{
     font-size: 43px;
     display: inline;
-    margin: 20px 10px
+    margin: 20px 10px;
+    text-align: center;
 }
 .category-filter__title>.material-icons{
     font-size: 30px;
@@ -44,7 +51,7 @@ body{
 
 /*mine*/
 .main{
-    width: 81%;
+   max-width: 81%;
 }
 
 /*main header*/

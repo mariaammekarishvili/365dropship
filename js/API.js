@@ -12,11 +12,11 @@ const connect = async (url) =>
 
 }
 
-export const productsSort = async (sort = null) => {
-   return  await connect(`products${sort ? `?sort=${sort}` : ""}`);
-}
-
+export const productsSort = async (sort = null) => await connect(`products${sort ? `?sort=${sort}` : ""}`);
 
 export const categories = async () => await connect('products/categories');
 
-console.log(categories())
+export const products = async () => await connect('products')
+
+// console.log(categories())
+console.log(products())
